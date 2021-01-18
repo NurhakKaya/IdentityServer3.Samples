@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC Authentication", "EmbeddedMvc\MVC Authentication.csproj", "{6FF07508-76CF-459D-AA97-76B3BAD58D65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{9CD67510-4FFE-4907-A2D0-560EEE7D11BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{A7E14489-BD4D-4205-9A41-07B461464140}"
+	ProjectSection(SolutionItems) = preProject
+		SolutionItems\RoleClaimsAreInIdToken.png = SolutionItems\RoleClaimsAreInIdToken.png
+		SolutionItems\RoleClaimsAreInIdToken.txt = SolutionItems\RoleClaimsAreInIdToken.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7488501-B4B1-4256-B654-4866BAFD01EF}
 	EndGlobalSection
 EndGlobal
