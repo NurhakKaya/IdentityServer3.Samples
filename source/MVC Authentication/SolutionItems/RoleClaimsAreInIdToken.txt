@@ -16,3 +16,26 @@ expires_at
 19/01/2021 00:29:35 +00:00
 app_specific
 some data
+
+
+
+id_token decoded result - see that role claims are in the id_token
+{
+  "nonce": "637466093671289426.YWM2YTRlOWMtZDA4Ni00MjdkLWIyMDUtYWIwMWI1YjU4OTUwNTY3MDY3M2MtOTQxOS00ODAwLTllNzctZjE4ZjIyOWE0OGQ2",
+  "iat": 1611012569,
+  "at_hash": "evWUZowoQshwIUwsUxaJBA",
+  "sub": "1",
+  "amr": "password",
+  "auth_time": 1611011017,
+  "idp": "idsrv",
+  "given_name": "Bob",
+  "family_name": "Smith",
+  "role": [
+    "Geek",
+    "Foo"
+  ],
+  "iss": "https://localhost:44319/identity",
+  "aud": "mvc",
+  "exp": 1611012869,
+  "nbf": 1611012569
+}
