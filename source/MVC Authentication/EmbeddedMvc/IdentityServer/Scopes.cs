@@ -14,27 +14,31 @@ namespace EmbeddedMvc.IdentityServer
                     Enabled = true,
                     Name = "roles",
                     Type = ScopeType.Identity,
+                    IncludeAllClaimsForUser=true,
                     Claims = new List<ScopeClaim>
                     {
-                        new ScopeClaim("role")
-                    }
-                },
-                new Scope
-                {
-                    Enabled = true,
-                    DisplayName = "Sample API",
-                    Name = "sampleApi",
-                    Description = "Access to a sample API",
-                    Type = ScopeType.Resource,
-
-                    Claims = new List<ScopeClaim>
-                    {
-                        new ScopeClaim("role")
+                        new ScopeClaim("role",true)
                     }
                 }
+                //,
+                //new Scope
+                //{
+                //    Enabled = true,
+                //    DisplayName = "Sample API",
+                //    Name = "sampleApi",
+                //    Description = "Access to a sample API",
+                //    Type = ScopeType.Resource,
+
+                //    Claims = new List<ScopeClaim>
+                //    {
+                //        new ScopeClaim("role")
+                //    }
+                //}
             };
-            
+
             scopes.AddRange(StandardScopes.All);
+
+
 
             return scopes;
         }
