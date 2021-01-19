@@ -39,3 +39,72 @@ id_token decoded result - see that role claims are in the id_token
   "exp": 1611012869,
   "nbf": 1611012569
 }
+
+**************************************************
+IdentityServer3 upgrade from 2.0.0 to 2.6.0
+**************************************************
+
+sub
+1
+given_name
+Bob
+family_name
+Smith
+role
+Geek
+role
+Foo
+id_token
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSIsImtpZCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSJ9.eyJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDMxOS9pZGVudGl0eSIsImF1ZCI6Im12YyIsImV4cCI6MTYxMTAxNDMzNywibmJmIjoxNjExMDE0MDM3LCJub25jZSI6IjYzNzQ2NjEwODM0OTg2MzI2Ni5OR1UzT0dWallXTXRZVGc1TVMwMFl6WmhMV0U0WVRBdE5HRmtOR1UwWmpWbU56VXlaV1kyT1dWaE0yTXROakkwWWkwME5qZzFMVGxtT1dZdFpHUmtOek5rT1RCa1ptVmwiLCJpYXQiOjE2MTEwMTQwMzcsImF0X2hhc2giOiJ2LThpM2Y4VGVGYTRNa0IwX2hoTl9nIiwic2lkIjoiMTlmZjFkOTE0MWUwMGM0NDkzMjA5OWQ0OTg4MzZmOTAiLCJzdWIiOiIxIiwiYXV0aF90aW1lIjoxNjExMDExMDE3LCJpZHAiOiJpZHNydiIsImdpdmVuX25hbWUiOiJCb2IiLCJmYW1pbHlfbmFtZSI6IlNtaXRoIiwicm9sZSI6WyJHZWVrIiwiRm9vIl0sImFtciI6WyJwYXNzd29yZCJdfQ.jw5QFtxPc92RatqFZ8WsL-nx1K8ad4T0trL9Cz869Yz6pMm7szsFggNF0yAtM49Hq3Zyj5mC0iloIMudMY-QnDYwC40nAzmeduPZENg68E1C2GBSiAWVEjuGjJK3kasmZr6aQk_vAwFOlnvuYRVGAPNbJc-BQbDyTfoMxWB2rs2zOC3oN5H9ep_88GSyQg_WhMBHDeRH4NlOMW-gKImFj3pm_Hh4ECCchyKNRxK0zqUnKbJbGFjp9serxGL-1r3NhEzqhQyvZSd4_fOTPwg1jR9mRYYpmEnU8HOzjLAQr5jxOpJa24AhcXB94Yw8gFNYpFiKHK4eXsVzdBVy77IEDw
+access_token
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSIsImtpZCI6ImEzck1VZ01Gdjl0UGNsTGE2eUYzekFrZnF1RSJ9.eyJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDMxOS9pZGVudGl0eSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzE5L2lkZW50aXR5L3Jlc291cmNlcyIsImV4cCI6MTYxMTAxNzYzNiwibmJmIjoxNjExMDE0MDM2LCJjbGllbnRfaWQiOiJtdmMiLCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIiwicm9sZXMiXSwic3ViIjoiMSIsImF1dGhfdGltZSI6MTYxMTAxMTAxNywiaWRwIjoiaWRzcnYiLCJhbXIiOlsicGFzc3dvcmQiXX0.nuzxiWYZR1xh77T5qAZI93T4I3v4IU9lt0L3Xq7ucNmoiSDZSnlNlKvPmRpzvt--SjibxZrJeREV6D-sZOiyEkiR7LMEe6DrMOo_Dn2WJl1k88pAz9iUIu-_-jLAvlVayvBGrR_ZbFDS5aCxiYMo5kG7fcyMir7gBcj2qEazAQf4RGJ8RcrKTVQNo3svsK0d0S5VN-VSoVL8nxyPimmDFitfwWHTaNQMay7IR2NFuOtAvmNtj0S-faEquGDvWbMfqlzE2Y8A8EyHh2ZTUZoYxUNPTv3Gp2jxfP8t2TBkA0uGe5SC14Pb_Jt5kglfNLE3s-hFyMwSWxpqv5hvVNhRtQ
+expires_at
+19/01/2021 00:53:59 +00:00
+app_specific
+some data
+
+id_token decoded result still has the role claims + more
+{
+  "iss": "https://localhost:44319/identity",
+  "aud": "mvc",
+  "exp": 1611014337,
+  "nbf": 1611014037,
+  "nonce": "637466108349863266.NGU3OGVjYWMtYTg5MS00YzZhLWE4YTAtNGFkNGU0ZjVmNzUyZWY2OWVhM2MtNjI0Yi00Njg1LTlmOWYtZGRkNzNkOTBkZmVl",
+  "iat": 1611014037,
+  "at_hash": "v-8i3f8TeFa4MkB0_hhN_g",
+  "sid": "19ff1d9141e00c44932099d498836f90",
+  "sub": "1",
+  "auth_time": 1611011017,
+  "idp": "idsrv",
+  "given_name": "Bob",
+  "family_name": "Smith",
+  "role": [
+    "Geek",
+    "Foo"
+  ],
+  "amr": [
+    "password"
+  ]
+}
+
+This is similar to my project's output but my project doesn't have details like role claims
+{
+  "iss": "https://identity.MYPROJECT.localhost/identity",
+  "aud": "https://identity.MYPROJECT.localhost/identity/resources",
+  "exp": 1610997517,
+  "nbf": 1610997217,
+  "client_id": "MYPROJECT_Local",
+  "scope": [
+    "openid",
+    "roles",
+    "profile",
+    "framework"
+  ],
+  "sub": "woody.test@bobmail.info",
+  "auth_time": 1610987076,
+  "idp": "idsrv",
+  "jti": "f72a92c6f954002486092102d7d24284",
+  "amr": [
+    "password"
+  ]
+}
